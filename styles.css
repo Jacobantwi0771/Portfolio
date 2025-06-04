@@ -1,0 +1,239 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: rgba(0, 0, 0, 0.993);
+    color: antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/****************Navigation **************/
+header{
+    width: 100%;
+}
+.top_nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.938),rgba(0, 0, 0, 0.938));
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    padding: 1rem 10rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.top_nav h1{
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+.top_click ul{
+    display: flex;
+}
+.top_click ul li{
+    margin: 0 2rem 0 2rem;
+    list-style: none;
+}
+.top_click ul li a{
+   text-decoration: none;
+   font-size: 1.7rem;
+   color: white;
+   padding-bottom: 5px;
+   cursor: pointer;
+}
+.top_click ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(233, 32, 66);
+    display: block;
+    margin: auto;
+    margin-top: 4px;
+    transition: 0.5s;
+}
+.top_click ul li:hover::after{
+    width: 100%;
+}
+
+ /******************** Hero ******************/
+.big_hero{
+    margin-top: 7rem;
+    /* background-color: blue; */
+    height: 95vh;
+    width: 100%;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid blue; */
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    gap: 14%;
+}
+.text{
+    font-size: 1.7rem;
+    width: 100%;
+    /* border: 2px solid blue; */
+}
+.text h2{
+    font-weight: bold;
+    font-size: 5rem;
+}
+.text p{
+    line-height: 1.5;
+    font-size: 1.7rem;
+}
+.herobtns{
+    margin-top: 1.3rem;
+}
+.top_hire #hireMe{
+    cursor: pointer;
+  
+}
+.top_hire #hireMe:hover{
+    transition: .55s;
+}
+#hireMe{
+    font-size: 1.7rem;
+    border: none;
+    border-radius: 2rem;
+    background: linear-gradient(30deg, rgb(233, 32, 66), rgb(255, 94, 0));
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 6px 20px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: transform .4s;
+}
+#hireMe:hover{
+    background: white;
+    color: rgb(233, 32, 66);
+    transform: scale(1.2);
+}
+#downloadCvBtn{
+    font-size: 1.7rem;
+    background: black;
+    color: white;
+    font-weight: bold;
+    padding: 6px 12px;
+    border: 2px solid rgb(233, 32, 66);
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: transform .4s;
+}
+#downloadCvBtn:hover{
+    background: rgb(233, 32, 66);
+    color: white;
+    transform: scale(1.1);
+}
+.myDp img{
+    border: 15px solid rgb(39, 30, 31);
+    border-radius: 50%;
+}
+span{
+    color:  rgb(233, 32, 66);
+}
+
+/*************Services ****************/
+.service{
+    /* background: green; */
+    height: 90vh;
+    width: 100%;
+    padding-top: 4px;
+}
+.service h2{
+    font-size: 3rem;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.h2-line{
+    height: 3px;
+    width: 15%;
+    margin: 10px auto;
+    background: linear-gradient(30deg, rgb(233, 32, 66), rgb(255, 94, 0));
+    border: none;
+    border-radius: 2px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+.myservice{
+    width: 85%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px;
+}
+.myservice-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 12px;
+    background: rgb(41, 39, 39);
+    border: none;
+    border-radius: 5px;
+}
+.myservice-box h3{
+    font-size: 2rem;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.myservice-box p{
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 1.5;
+}
+@media (max-width:700px) {
+    .top_nav{
+        padding: 0 30px;
+    }
+    .top_click ul{
+        display: none;
+    }
+    .big_hero{
+        height: 100vh;
+        width: 100%;
+    }
+    .hero{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+    .myDp img{
+        width: 300px;
+        height: 300px;        
+    }
+    .service{
+        height: 100%;
+        width: 100%;
+        padding-top: 20px;
+    }
+    .h2-line{
+        height: 3px;
+        width: 37%;
+    }
+    .myservice{
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+}
+
+/*************** About Me  ***********/
